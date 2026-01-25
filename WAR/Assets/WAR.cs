@@ -92,11 +92,12 @@ public class WAR : MonoBehaviour {
       {
          { "Filename", "WARSettings.json" },
          { "Name", "WAR Settings" },
-         { "Listing", new List<Dictionary<string, object>>{
+         { "Listings", new List<Dictionary<string, object>>{
             new Dictionary<string, object>
             {
                { "Key", "Detonation" },
-               { "Text", "The module will detonate the bomb upon running out of time." }
+               { "Text", "Instant Detonation" },
+               { "Description", "Toggle whether the module will detonate the bomb upon running out of time." }
             }
          } }
       }
