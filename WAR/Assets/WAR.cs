@@ -392,7 +392,6 @@ public class WAR : MonoBehaviour {
       if (Settings.Detonation) {
          StartCoroutine(DETONATE());
       }
-      
    }
 
    #region LowTaperFade
@@ -506,7 +505,7 @@ public class WAR : MonoBehaviour {
 
       //Debug.Log(Solved);
 
-      if (Solved >= ModCount) { //Do input phase or something here
+      if (Bomb.GetSolvedModuleNames().Count(x => !ignoredModules.Contains(x)) >= ModCount) { //Not using Solved because of pseudoneedies solving early
          Solve();
          StopCoroutine(Count());
          Music.Stop();
